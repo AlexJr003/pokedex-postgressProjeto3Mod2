@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><img src="/img/pokebola.jpg" alt="pokebola"></li>
+            <li>
+                <a href="/"><h1>Pokedex</h1></a>
+            </li>
+            <li><a href="#submit">Submit</a></li>
+            <li><a href="#cards">Pokemons</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <img src="/img/pokemonBanner.jpg" alt="Banner">
+    </header>
+
+    
+<main> 
+
+    <section id="submit">
+
+        
+      
+<div> 
+            <% if (pokemon == undefined) { %>
+                <h2>Submit a new Pokemon</h2>
+
+        <form action="/add" method="post">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description">
+
+            <label for="type">Type:</label>
+            <input type="text" id="type" name="type">
+
+            <label for="height">Height:</label>
+            <input type="text" id="height" name="height">
+
+            <label for="weight">Weight:</label>
+            <input type="text" id="weight" name="weight">
+
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category">
+
+            <label for="skill">Skill:</label>
+            <input type="text" id="skill" name="skill">
+
+            <label for="imagem">Image:</label>
+            <input type="text" id="imagem" name="imagem">
+            
+            <button id="btnCadastrar" type="submit">Submit</button>
+
+        </form>
+        <% } else { %>
+            <h2>Update the Pokemon</h2>
+        <form action="/update/<%= pokemon.id %>" method="POST">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="<%= pokemon.name %>">
+
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" value="<%= pokemon.description %>">
+
+            <label for="type">Type:</label>
+            <input type="text" id="type" name="type" value="<%= pokemon.type %>">
+
+            <label for="height">Height:</label>
+            <input type="text" id="height" name="height" value="<%= pokemon.height %>">
+
+            <label for="weight">Weight:</label>
+            <input type="text" id="weight" name="weight" value="<%= pokemon.weight %>">
+
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" value="<%= pokemon.category %>">
+
+            <label for="type">Skill:</label>
+            <input type="text" id="skill" name="skill" value="<%= pokemon.skill %>">
+
+            <label for="imagem">Imagem:</label>
+            <input type="text" id="imagem" name="imagem" value="<%= pokemon.imagem %>">
+            
+            <button id="btnUpdate" type="submit">Submit</button>
+
+        </form>
+        <% } %>
+
+    </div> 
+    </section>
+
+    
+
+    <section id="cards">
+
+        <h2>Pokemon List</h2>
+
+        <% pokedex.forEach((pokemon) => { %>
+            
+    <div class="card">
+        
+        <img src="<%= pokemon.imagem %>" alt="">
+        <h3 class="name"><%= pokemon.name %></h3>
+        <p class="description"><%= pokemon.description %></p>
+        <p class="type" >Type: <%= pokemon.type %></p>
+        <a href="/detalhes/<%= pokemon.id %> ">Details</a>
+        <a href="/details/<%= pokemon.id %>">Edit</a>
+        <a href="/delete/<%= pokemon.id %>">Delete</a>
+        
+    </div>
+        <% }) %>
+     
+    </section>
+
+
+</main>
+
+<footer>
+    <p>
+        Information taken from<a href="https://www.pokemon.com/br/pokedex/"> Pokedex</a>
+    </p>
+</footer>
+
+</body>
+<script src="/js/script.js"> </script>
+</html>

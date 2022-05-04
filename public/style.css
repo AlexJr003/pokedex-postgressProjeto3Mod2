@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+ margin: 0;
+ padding: 0;
+ font-family: Roboto, Arial; 
+ scroll-behavior: smooth;
+}
+
+
+nav{
+    position:fixed;
+    z-index:9999;
+    width: 100%;
+    background-color: #6F0100;
+    display: flex;
+}
+
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li{
+    padding: 0.6rem;
+}
+
+nav img{
+    width: 3rem;
+}
+
+nav h1 {
+    color: white;
+    font-size:1.7rem aliceblue;
+    text-align: center;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color:white;
+    font-size: 1.4rem;
+}
+
+header img{
+    width:100%
+}
+
+main{
+
+margin: 0 10rem #0B090E 0 10rem #0B090E;
+
+background-image: url(./img/pokemonWallpaper.jpg);
+
+position:relative;
+background-color: black;
+
+}
+
+section#cards{
+    display: flex;
+    justify-content:space-evenly;
+    margin-top: 5rem;
+    flex-wrap: wrap;
+    
+}
+
+section#cards div.card{
+    width: 20rem;
+    box-shadow: 5px 5px 5px 5px #ffffff20;
+    padding: 5rem;
+    margin: 3rem 0 5rem 0;
+    background-image: url(../img/pokedexWallpaper.jpg);
+    
+}
+
+section#cards h2{
+    width: 100%;
+    text-align: center;
+    color: white;
+
+} 
+
+section#cards div.card img{
+    width: 100%;
+}
+
+section#cards div.card h3{
+    margin-bottom: 1rem;
+}
+
+section#cards div.card a{
+    padding: .6rem;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 1rem;
+    background-color: rgb(255, 255, 255);
+    border: solid 1px #ffffff;
+    color:rgb(185, 5, 5);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+    margin-top: 0.5rem;
+}
+
+section#cards div.card a:hover{
+    background-color: #6F0100;
+    color: white
+
+}
+
+section#cards div.card a#edit:hover{
+    background-color: #6F0100;
+    color: white
+
+}
+
+section#cards div.card a#delete:hover{
+    background-color: #6F0100;
+    color: white
+
+}
+
+
+section#cards div.card h3{
+    color: white;
+}
+
+section#cards div.card p.description{
+    margin-bottom: 1rem;
+    color: white;
+}
+
+section#cards div.card p.type{
+    color: white;
+    padding:0.05rem;
+}
+
+section#submit{
+    display:flex;
+    justify-content: center;
+    color: white;
+    padding: 5rem;
+}
+
+section#submit img{
+    width:25%;
+}
+
+
+section#submit h2{
+    width:100%;
+    text-align: center;
+    padding-bottom: 5rem;
+}
+
+section#submit form{
+    width: 100%;
+}
+
+section#submit form input{
+    width: 100%;
+    padding: .5rem;
+    font-size: 1rem;
+    outline: none;
+    border: solid 2px #6F0100;
+    margin: 0 1rem 1rem 1rem;
+}
+
+section#submit form label{
+    margin: .5rem;
+    color: #ffffff;
+
+}
+
+section#submit form button{
+    padding: .6rem;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 1.3rem;
+    background-color: rgb(255, 255, 255);
+    border: solid 1px  #6F0100;
+    color:#000000;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+section#submit form button:hover{
+    background-color:#6F0100;
+
+    color: white
+
+}
+
+footer {
+    background-color: #6F0100;
+    padding:5rem;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+footer p{
+    width:100%;
+    color:white;
+    text-align: center;
+    font-size: 1rem;
+}
+
+footer p a{
+    text-decoration: none;
+    color:white;
+    font-weight: 700;
+}
+
+footer p a:hover{
+    
+    color:rgb(0, 0, 0);
+    font-weight: 900;
+    transition: all .3s ease-in-out;
+    
+}
