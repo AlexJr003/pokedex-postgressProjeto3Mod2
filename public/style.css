@@ -45,7 +45,7 @@ nav ul li a{
 }
 
 header img{
-    width:100%
+    width:100%;
 }
 
 main{
@@ -62,7 +62,7 @@ background-color: black;
 section#cards{
     display: flex;
     justify-content:space-evenly;
-    margin-top: 5rem;
+    margin-top: 5rem, black;
     flex-wrap: wrap;
     
 }
@@ -204,6 +204,7 @@ footer {
     display:flex;
     flex-wrap: wrap;
     justify-content:center;
+    position: relative;
 }
 footer p{
     width:100%;
@@ -225,3 +226,91 @@ footer p a:hover{
     transition: all .3s ease-in-out;
     
 }
+
+.modal-overlay {
+    background-color: #00000050;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+  }
+  
+  .modal {
+    margin: 1rem;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    min-height: 300px;
+    background-color: #fff;
+    border-radius: 11px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #dc0a2d;
+    padding: 1rem;
+    color: #fff;
+  }
+  
+  .modal-header a#close-modal-put {
+    font-size: 1.4rem;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .modal-body {
+    padding: 0.5rem 1rem;
+    flex: 1;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .form-modal {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .form-modal input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    outline: none;
+    border: solid 2px #ccc;
+  }
+  
+  .form-modal label {
+    color: rgb(112, 112, 112);
+    padding-top: 0.5rem;
+  }
+  
+  .form-modal button {
+    padding: 0.6rem;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #40af00;
+    border: solid 1px #40af00;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .form-modal button:hover {
+    background-color: #40af00;
+    color: #fff;
+  }
+  
