@@ -1,0 +1,18 @@
+<section class="modal-overlay" id="ovarlay">
+    <div class="modal" id="modal">
+
+        <div class="modal-header">
+            <h3>Delete Pokemon</h3>
+            <a href="/" id="close-modal-put">X</a>
+        </div>
+
+        <div class="modal-body">
+            <p>Are you sure you want to delete <%= pokemonDel.name %>?</p>
+            <div id="btns-del">
+                <a id="no" href="/">No</a>
+                <a id="yes" href="/remove/<%= pokemonDel.id %>">Yes</a>
+            </div>
+        </div>
+
+    </div>        
+</section>

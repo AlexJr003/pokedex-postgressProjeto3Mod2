@@ -257,7 +257,7 @@ footer p a:hover{
   .modal-header {
     display: flex;
     justify-content: space-between;
-    background-color: #dc0a2d;
+    background-color: #6F0100;
     padding: 1rem;
     color: #fff;
   }
@@ -314,3 +314,43 @@ footer p a:hover{
     color: #fff;
   }
   
+  .modal-body p {
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  div#btns-del {
+    display: flex;
+    margin: 0 auto;
+  }
+  
+  div#btns-del a {
+    padding: 0.7rem;
+    text-decoration: none;
+    width: 100%;
+    margin: 2rem 1rem 1rem;
+    border-radius: 3px;
+  }
+  
+  div#btns-del a#no {
+    color: #6F0100;
+    border: solid 1px #6F0100;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  div#btns-del a#no:hover {
+    color: #fff;
+    background-color: #6F0100;
+  }
+  
+  div#btns-del a#yes {
+    color: #40af00;
+    border: solid 1px #40af00;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  div#btns-del a#yes:hover {
+    color: #fff;
+    background-color: #40af00;
+  }

@@ -37,7 +37,7 @@ const getById = async (req, res) => {
   try {
     const method = req.params.method;
     const pokedex = await Pokemon.findAll();
-    const pokemon = await Pokemon.findByPK(req.params.id);
+    const pokemon = await Pokemon.findByPk(req.params.id);
 
     if (method == "put") {
       res.render("index", {
@@ -67,19 +67,25 @@ const update = async (req, res) => {
     }
   };
 
-// const detalhes = async (req, res) => {
-//     try {
-//         const pokemon = req.body;
+  const remove = async (req, res) => {
+    try {
+      await Pokemon.destroy({ where: { id: req.params.id } });
+      res.redirect("/");
+    } catch (err) {
+      res.status(500).send({ err: err.message });
+    }
+  };
 
-//         if(!pokemon) {
-//             return res.redirect("/details")
-//         }
-//     await Pokemon.detalhes(pokemon);
-//     res.redirect("/details");
-//     } catch (err) {
-//         res.status(500).send({ err: err.message});
-//     }
-//     };
+
+  const details = async (req, res) => {
+    try {
+      const pokemon = req.body;
+      await Pokemon.details(pokemon, {where: {id: req.params.id }});
+      res.redirect("/");
+    } catch (err) {
+      res.status(500).send({ err: err.message });
+    }
+  };
 
 module.exports = {
   getAll,
@@ -87,5 +93,6 @@ module.exports = {
   create,
   getById,
   update,
-  // detalhes,
+  remove,
+  details,
 };
