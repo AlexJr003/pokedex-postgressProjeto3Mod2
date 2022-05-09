@@ -40,7 +40,10 @@
         <h3 class="name"><%= pokemon.name %></h3>
         <p class="description"><%= pokemon.description %></p>
         <p class="type" >Type: <%= pokemon.type %></p>
-        <a id="details" href="/getById/<%= pokemon.id %>/details">Details</a>
+        <p class="type" >Height: <%= pokemon.height%></p>
+        <p class="type" >Weight: <%= pokemon.weight %></p>
+        <p class="type" >Category: <%= pokemon.category %></p>
+        <p class="type" >Skill: <%= pokemon.skill %></p>
         <a id="edit" href="/getById/<%= pokemon.id %>/put">Edit</a>
         <a id="delete" href="/getById/<%= pokemon.id %>/delete">Delete</a>
         
@@ -59,10 +62,6 @@
         <% if (pokemonDel !=null) {%>
             <%- include('./partials/modalDel') %>
                 <% } %>
-
-                <% if (pokemonDetails !=null) {%>
-                    <%- include('./partials/modalDetails') %>
-                        <% } %>
 
 <footer>
     <p>

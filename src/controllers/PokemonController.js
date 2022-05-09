@@ -77,15 +77,6 @@ const update = async (req, res) => {
   };
 
 
-  const details = async (req, res) => {
-    try {
-      const pokemon = req.body;
-      await Pokemon.details(pokemon, {where: {id: req.params.id }});
-      res.redirect("/");
-    } catch (err) {
-      res.status(500).send({ err: err.message });
-    }
-  };
 
 module.exports = {
   getAll,
@@ -94,5 +85,4 @@ module.exports = {
   getById,
   update,
   remove,
-  details,
 };

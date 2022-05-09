@@ -8,6 +8,5 @@ routes.post("/create", PokemonController.create);
 routes.get("/getById/:id/:method", PokemonController.getById);
 routes.post("/update/:id", PokemonController.update);
 routes.get("/remove/:id", PokemonController.remove);
-routes.get("/details/:id", PokemonController.details);
 
 module.exports = routes;
